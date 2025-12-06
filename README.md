@@ -1,14 +1,12 @@
 # E-commerce-Data-Analytics-with-Snowflake-and-Metabase
 A production-ready data warehouse solution built with Snowflake for e-commerce business intelligence. This project implements modern data engineering practices to transform raw transactional data into actionable business insights.
 
-🏗️ Architecture Overview
+# 🏗️ Architecture Overview
 1. Dimension Tables (Master Data)
 Purpose: Store descriptive attributes for business entities
 
 dim_customers - Customer master with segmentation (RFM, value tiers, activity status)
-
 dim_products - Product catalog with pricing, margins, and stock classification
-
 dim_date - Complete calendar with business days, seasons, and holidays
 
 2. Fact Tables (Transactional Data)
@@ -16,24 +14,18 @@ Purpose: Capture business events with quantitative metrics
 
 fact_sales - Core sales transactions with financial calculations
 
-Net amount, profit margins, discount analysis
-
-Order size classification and status tracking
-
-Foreign keys to all dimension tables
+>> Net amount, profit margins, discount analysis
+>> Order size classification and status tracking
+>> Foreign keys to all dimension tables
 
 3. Internal Staging Layer
 Purpose: Raw data transformation and standardization
 
-stg_customers - Clean customer data from source systems
-
-stg_products - Standardized product information
-
-stg_orders - Order data validation and enrichment
-
-stg_order_items - Line-item standardization
-
-stg_categories - Product category hierarchy
+>> stg_customers - Clean customer data from source systems
+>> stg_products - Standardized product information
+>> stg_orders - Order data validation and enrichment
+>> stg_order_items - Line-item standardization
+>> stg_categories - Product category hierarchy
 
 4. Analytical Views
 Purpose: Business-ready datasets for different teams
